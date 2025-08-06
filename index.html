@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DesiConnect Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>DesiConnect</header>
+
+  <div id="filters">
+    <input type="text" id="locationInput" placeholder="Enter ZIP or City">
+    <label for="radiusInput">Radius: <span id="radiusLabel">15 miles</span></label>
+    <input type="range" id="radiusInput" min="1" max="50" value="15">
+    <label for="sortSelect">Sort by:</label>
+    <select id="sortSelect">
+      <option value="distance">Distance</option>
+      <option value="rating">Rating</option>
+    </select>
+  </div>
+
+  <div class="category-list" id="categoryList">
+    <div class="category active" data-type="restaurant">Restaurants</div>
+    <div class="category" data-type="grocery_or_supermarket">Grocery</div>
+    <div class="category" data-type="hindu_temple">Temples</div>
+    <div class="category" data-type="clothing_store">Clothing & Jewelry</div>
+    <div class="category" data-type="movie_theater">Events</div>
+    <div class="category" data-type="store">Vendors</div>
+  </div>
+
+  <div id="map"></div>
+  <div id="results"></div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
